@@ -5,7 +5,6 @@ rows = []
 row_check = []
 rows_to_clean = ['shot_aerial_won', 'shot_first_time', 'under_pressure']
 
-# Step 1: Read the existing data into memory
 with open(filename, mode="r", newline="", encoding="utf-8") as file:
     reader = csv.reader(file)
     header = next(reader)  # Save the header row
@@ -20,7 +19,6 @@ with open(filename, mode="r", newline="", encoding="utf-8") as file:
         
         rows.append(row)
 
-# Step 3: Write the updated data back to the file
 with open(filename, mode="w", newline="", encoding="utf-8") as file:
     writer = csv.writer(file)
     writer.writerow(header)   # Write back the header
