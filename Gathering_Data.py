@@ -3,7 +3,7 @@ from pathlib import Path
 import pandas as pd
 from statsbombpy import sb
 
-SHOT_COLUMNS = ['goalkeeper_position', 'shot_aerial_won', 'shot_body_part',
+SHOT_COLUMNS = ['shot_aerial_won', 'shot_body_part',
                 'shot_end_location', 'shot_first_time', 'shot_freeze_frame',
                 'shot_key_pass_id', 'shot_outcome', 'shot_statsbomb_xg', 'shot_technique',
                 'shot_type', 'under_pressure', 'type', 'location']
@@ -21,6 +21,6 @@ for row in competitions_df.itertuples(index=False):
 
 shots_df = pd.concat(shot_frames, ignore_index = True)
 
-out_path = Path(__file__).resolve().parent.parent / "Data" / "Shots_Data.csv"
+out_path = Path(__file__).resolve().parent.parent/ "Official_Project" / "Data" / "Shots_Data.csv"
 out_path.parent.mkdir(parents = True, exist_ok = True)
 shots_df.to_csv(out_path, index = False)
