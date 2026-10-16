@@ -5,8 +5,8 @@ from statsbombpy import sb
 
 SHOT_COLUMNS = ['shot_aerial_won', 'shot_body_part',
                 'shot_end_location', 'shot_first_time', 'shot_freeze_frame',
-                'shot_key_pass_id', 'shot_outcome', 'shot_statsbomb_xg', 'shot_technique',
-                'shot_type', 'under_pressure', 'type', 'location']
+                'shot_outcome', 'shot_statsbomb_xg', 'shot_technique',
+                'shot_type', 'under_pressure', 'location']
 
 competitions = sb.competitions()
 competitions_df = competitions[competitions.competition_gender == "male"].loc[:, ['competition_id', 'season_id']]
