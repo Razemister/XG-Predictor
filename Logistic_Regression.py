@@ -12,7 +12,7 @@ def save_predictions(X_test, y_test, xg):
     predictions["xg"] = xg
     predictions.to_csv(OUT_PATH)
 
-def linear_regression(X_train, y_train, X_test, y_test):
+def logistic_regression(X_train, y_train, X_test, y_test):
     model = LogisticRegression()
     model.fit(X_train, y_train)
 

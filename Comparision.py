@@ -1,7 +1,7 @@
 from pathlib import Path
 import duckdb as db
 from sklearn.model_selection import train_test_split
-from Linear_Regression import linear_regression
+from Logistic_Regression import logistic_regression
 
 DATA_DIR = Path(__file__).parent / "Data"
 
@@ -27,4 +27,4 @@ X_train, X_test, y_train, y_test = train_test_split(
     X, y, test_size=0.2, random_state=42, stratify=y
 )
 
-linear_data = linear_regression(X_train, y_train, X_test, y_test)
+linear_data = logistic_regression(X_train, y_train, X_test, y_test)
