@@ -39,7 +39,8 @@ with open(shots_filename, mode = "r", newline = "", encoding = "utf-8") as file:
             if freeze_frame != "Penalty":
                 for player in ast.literal_eval(freeze_frame):
                     x, y = player["location"]
-                    freeze_frame_rows.append([shot_id, player["teammate"], x, y])
+                    goalkeeper = player["position"]["name"] == "Goalkeeper"
+                    freeze_frame_rows.append([shot_id, player["teammate"], goalkeeper, x, y])
 
         shot_rows.append(row)
 
@@ -51,5 +52,5 @@ with open(shots_filename, mode = "w", newline = "", encoding = "utf-8") as file:
 if has_freeze_frame:
     with open(freeze_frame_filename, mode = "w", newline = "", encoding = "utf-8") as file:
         writer = csv.writer(file)
-        writer.writerow(["shot_id", "teammate", "location_x", "location_y"])
+        writer.writerow(["shot_id", "teammate", "goalkeeper", "location_x", "location_y"])
         writer.writerows(freeze_frame_rows)
