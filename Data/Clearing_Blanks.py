@@ -1,6 +1,7 @@
 import csv
+from pathlib import Path
 
-filename = "../Official_Project/Data/Shots_Data.csv"
+filename = Path(__file__).resolve().parent / "Shots_Data.csv"
 rows = []
 row_check = []
 rows_to_clean = ['shot_aerial_won', 'shot_first_time', 'under_pressure', 'shot_freeze_frame']

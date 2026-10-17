@@ -21,6 +21,5 @@ for row in competitions_df.itertuples(index=False):
 
 shots_df = pd.concat(shot_frames, ignore_index = True)
 
-out_path = Path(__file__).resolve().parent.parent/ "Official_Project" / "Data" / "Shots_Data.csv"
-out_path.parent.mkdir(parents = True, exist_ok = True)
+out_path = Path(__file__).resolve().parent / "Shots_Data.csv"
 shots_df.to_csv(out_path, index = False)

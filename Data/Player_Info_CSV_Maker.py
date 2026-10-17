@@ -1,8 +1,10 @@
 import ast
 import csv
+from pathlib import Path
 
-shots_filename = "../Official_Project/Data/Shots_Data.csv"
-freeze_frame_filename = "../Official_Project/Data/Freeze_Frame_Data.csv"
+DATA_DIR = Path(__file__).resolve().parent
+shots_filename = DATA_DIR / "Shots_Data.csv"
+freeze_frame_filename = DATA_DIR / "Freeze_Frame_Data.csv"
 shot_rows = []
 freeze_frame_rows = []
 

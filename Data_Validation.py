@@ -1,7 +1,11 @@
+from pathlib import Path
+
 import duckdb as db
 
-shots = db.read_csv("../Official_project/Data/Shots_Data.csv")
-player = db.read_csv("../Official_project/Data/Freeze_Frame_Data.csv")
+DATA_DIR = Path(__file__).resolve().parent / "Data"
+
+shots = db.read_csv(str(DATA_DIR / "Shots_Data.csv"))
+player = db.read_csv(str(DATA_DIR / "Freeze_Frame_Data.csv"))
 
 null_locations_shots = db.sql("SELECT COUNT(*) FROM shots WHERE location_x IS NULL OR location_y IS NULL")
 null_locations_player = db.sql("SELECT COUNT(*) FROM player WHERE location_x IS NULL OR location_y IS NULL")
