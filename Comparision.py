@@ -23,4 +23,3 @@ X = shot_features[["distance", "angle"]]
 y = shot_features["goal"]
 
 linear_data = logistic_regression(X, y)
-print(linear_data)
