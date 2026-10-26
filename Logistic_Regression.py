@@ -4,7 +4,7 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import log_loss, roc_auc_score
 import pandas
 
-OUT_PATH = Path(__file__).parent / "Data" / "Linear_Prediction.csv"
+OUT_PATH = Path(__file__).parent / "Data" / "Logistic_Prediction.csv"
 
 def save_predictions(X_test, y_test, xg):
     predictions = X_test.copy()

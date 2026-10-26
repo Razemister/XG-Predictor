@@ -14,7 +14,12 @@ with open(filename, mode="r", newline="", encoding="utf-8") as file:
         if column in header:
             row_check.append(header.index(column))
 
+    shot_type_index = header.index('shot_type')
+
     for row in reader:
+        if row[shot_type_index] == 'Penalty':
+            continue
+
         for i in row_check:
             if row[i] == '':
                 if header[i] != 'shot_freeze_frame':

@@ -1,5 +1,5 @@
 Data/Shots_Data.csv
 Data/Freeze_Frame_Data.csv
-Data/Linear_Prediction.csv
+Data/Logistic_Prediction.csv
 __pycache__/
 
