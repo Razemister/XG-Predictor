@@ -62,7 +62,7 @@ Shots are currently split randomly into 80% train and 20% test, stratified so bo
 
 | Model | Log loss ↓ | ROC AUC ↑ |
 |---|---|---|
-| Baseline (ball position) | 0.309 | 0.746 |
+| Baseline (ball position) | 0.2909 | 0.7428 |
 | Freeze-frame (logistic) | _TBD_ | _TBD_ |
 | Freeze-frame (gradient boosting) | _TBD_ | _TBD_ |
 
@@ -110,7 +110,7 @@ python Comparision.py
 - [x] Data quality checks with DuckDB SQL
 - [x] Distance and angle features in SQL
 - [x] Baseline logistic regression
-- [ ] Grouped (by-match) train/test split
+- [x] Grouped (by-match) train/test split
 - [ ] Freeze-frame features and model
 - [ ] Gradient boosting comparison and body-part ablation
 - [ ] Calibration and comparison with StatsBomb xG
